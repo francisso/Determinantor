@@ -64,13 +64,10 @@ public class NewCore extends Component {
         Network net = new Network();
         image = img;
         image = resizeImage(image);
-        image = ImageProcessing.GetBinarized(image);
-        image = ImageProcessing.RemoveBrackets(image);
-        image = ImageProcessing.RemoveNoise(image, 2);
+        ImageProcessing processing = new ImageProcessing(image);
+        processing.defaultProcess();
 
-        ImageProcessing.FindRows(image);
-        ImageProcessing.FindColumns(image);
-        ImageProcessing.DrawRectangles(image);
+        // ImageProcessing.DrawRectangles(image);
         return image;
     }
 

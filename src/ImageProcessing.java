@@ -26,17 +26,22 @@ class ImageProcessing {
     private static final ArrayList<Integer[]> NumbersY = new ArrayList<Integer[]>();
     private static final int FADE_STEP = 25;
 
+    private BufferedImage image = null;
+
+    ImageProcessing(BufferedImage source) {
+        image = source;
+    }
+
 
     /**
      * Удаление шума с изображения
      *
-     * @param raw  Изображение для обработки
      * @param step Шаг обработки
      * @return Обработанное изображение
      */
     @NotNull
-    public static BufferedImage RemoveNoise(Image raw, int step) {
-        BufferedImage bufferedImage = (BufferedImage) raw;
+    public void RemoveNoise(int step) {
+        BufferedImage bufferedImage = (BufferedImage) image;
         BufferedImage noiseFree = new BufferedImage(bufferedImage.getWidth(), bufferedImage.getHeight(), bufferedImage.getType());
 
         for (int i = step - 1; i < bufferedImage.getWidth(); i += step)
@@ -52,7 +57,17 @@ class ImageProcessing {
                     CopyBlock(bufferedImage, noiseFree, i, j, step);
                 }
             }
-        return noiseFree;
+        image = noiseFree;
+    }
+
+    protected void defaultProcess() {
+        Binarize();
+        RemoveBrackets();
+        RemoveNoise(2);
+        FindRows();
+        FindColumns();
+        NumbersX = OptimizeColumnsArray(NumbersX);
+        saveImages();
     }
 
     private static void CopyBlock(@NotNull BufferedImage source, @NotNull BufferedImage dest, int x, int y, int step) {
@@ -92,11 +107,10 @@ class ImageProcessing {
     /**
      * Удаление скобок с изображения
      *
-     * @param raw Исходное изображение
      * @return Обработанное изображение
      */
-    public static BufferedImage RemoveBrackets(BufferedImage raw) {
-        BufferedImage bufferedImage = raw;
+    public void RemoveBrackets() {
+        BufferedImage bufferedImage = image;
         int startX = 0, endX = 0;
         for (int i = 0; i < bufferedImage.getWidth(); i++) {
             int sum = 0;
@@ -139,24 +153,22 @@ class ImageProcessing {
         }
 
         bufferedImage = ImageDrawing.ReplaceColumnsWith(bufferedImage, startX, endX, Color.WHITE);
-        return bufferedImage;
+        image = bufferedImage;
     }
 
     /**
      * Заполняет массив NumbersX координатами начал и концов строк
-     *
-     * @param raw Изображения для анализа
      */
-    public static void FindRows(@NotNull BufferedImage raw) {
+    public void FindRows() {
 
-        int pixels[] = new int[raw.getWidth()];
-        raw.getRGB(0, 0, raw.getWidth(), 1, pixels, 0, 1);
-        boolean previous = ImageProperties.HasBlackRow(pixels, (int) (raw.getWidth() * MIN_PERCENT_OF_BLACK_ROW));
+        int pixels[] = new int[image.getWidth()];
+        image.getRGB(0, 0, image.getWidth(), 1, pixels, 0, 1);
+        boolean previous = ImageProperties.HasBlackRow(pixels, (int) (image.getWidth() * MIN_PERCENT_OF_BLACK_ROW));
 
         //StartY - у начала строки, EndY - y конца строки
-        for (int i = 1, StartY = 0; i < raw.getHeight(); i++) {
-            raw.getRGB(0, i, raw.getWidth(), 1, pixels, 0, 1);
-            boolean current = ImageProperties.HasBlackRow(pixels, (int) (raw.getWidth() * MIN_PERCENT_OF_BLACK_ROW));
+        for (int i = 1, StartY = 0; i < image.getHeight(); i++) {
+            image.getRGB(0, i, image.getWidth(), 1, pixels, 0, 1);
+            boolean current = ImageProperties.HasBlackRow(pixels, (int) (image.getWidth() * MIN_PERCENT_OF_BLACK_ROW));
 
             //Переход с белого на черный
             if (StartY == 0 && !previous && current) {
@@ -180,19 +192,17 @@ class ImageProcessing {
 
     /**
      * Заполняет массив NumbersY координатами начал и концов столбцов
-     *
-     * @param raw Изображения для анализа
      */
-    public static void FindColumns(@NotNull BufferedImage raw) {
+    public void FindColumns() {
 
-        int pixels[] = new int[raw.getHeight()];
-        raw.getRGB(0, 0, 1, raw.getHeight(), pixels, 0, 1);
-        boolean previous = ImageProperties.HasBlackRow(pixels, (int) (raw.getHeight() * MIN_PERCENT_OF_BLACK_COLUMN));
+        int pixels[] = new int[image.getHeight()];
+        image.getRGB(0, 0, 1, image.getHeight(), pixels, 0, 1);
+        boolean previous = ImageProperties.HasBlackRow(pixels, (int) (image.getHeight() * MIN_PERCENT_OF_BLACK_COLUMN));
 
         //StartX - x начала колонки,  EndX - x её конца
-        for (int i = 1, StartX = 0; i < raw.getWidth(); i++) {
-            raw.getRGB(i, 0, 1, raw.getHeight(), pixels, 0, 1);
-            boolean current = ImageProperties.HasBlackRow(pixels, (int) (raw.getHeight() * MIN_PERCENT_OF_BLACK_COLUMN));
+        for (int i = 1, StartX = 0; i < image.getWidth(); i++) {
+            image.getRGB(i, 0, 1, image.getHeight(), pixels, 0, 1);
+            boolean current = ImageProperties.HasBlackRow(pixels, (int) (image.getHeight() * MIN_PERCENT_OF_BLACK_COLUMN));
 
             //Переход с белого на черный
             if (StartX == 0 && !previous && current) {
@@ -211,9 +221,6 @@ class ImageProcessing {
                 StartX = 0;
             }
         }
-
-        if (OPTIMIZE_COLUMNS_BY_DEFAULT)
-            NumbersX = OptimizeColumnsArray(NumbersX);
 
     }
 
@@ -273,17 +280,16 @@ class ImageProcessing {
     /**
      * Создает бинаризированное изображение
      *
-     * @param raw Изображение для обработки
      * @return Бинаризированное изображение
      */
     @NotNull
-    public static BufferedImage GetBinarized(@NotNull BufferedImage raw) {
-        BufferedImage binarized = new BufferedImage(raw.getWidth(), raw.getHeight(), raw.getType());
+    public void Binarize() {
+        BufferedImage binarized = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
         int colors[] = new int[256];
 
-        for (int i = 0; i < raw.getWidth(); i++)
-            for (int j = 0; j < raw.getHeight(); j++) {
-                int tmp = raw.getRGB(i, j);
+        for (int i = 0; i < image.getWidth(); i++)
+            for (int j = 0; j < image.getHeight(); j++) {
+                int tmp = image.getRGB(i, j);
                 // Определяем количество каждого оттенка серого
                 colors[ImageProperties.GetColorSum(tmp) / 3]++;
             }
@@ -291,17 +297,17 @@ class ImageProcessing {
         // Определяем опорную костанту изоборажения для определения граней как самый встречающийся цвет
         int edge = IndexOfMaximum(colors);
 
-        BinarizeByEdge(raw, binarized, 2 * edge);
+        BinarizeByEdge(image, binarized, 2 * edge);
         // Размер квадарата для поиска теней.
         // Обходим изобрадение с шагом 2 FADE_STEP
-        for (int i = 0; i < raw.getWidth() - FADE_STEP; i += 2 * FADE_STEP)
-            for (int j = 0; j < raw.getHeight() - FADE_STEP; j += 2 * FADE_STEP) {
+        for (int i = 0; i < image.getWidth() - FADE_STEP; i += 2 * FADE_STEP)
+            for (int j = 0; j < image.getHeight() - FADE_STEP; j += 2 * FADE_STEP) {
 
                 int sum = GetCountOfBlack(binarized, i + FADE_STEP, j + FADE_STEP, FADE_STEP);
                 if (sum >= FADE_STEP * FADE_STEP * PERCENT_OF_BLACK_PIXELS)
-                    RemoveBlackSquare(raw, binarized, edge, FADE_STEP, i, j);
+                    RemoveBlackSquare(image, binarized, edge, FADE_STEP, i, j);
             }
-        return binarized;
+        image = binarized;
     }
 
     private static void RemoveBlackSquare(@NotNull BufferedImage raw, @NotNull BufferedImage binarized, int edge, int step, int x, int y) {
@@ -359,4 +365,13 @@ class ImageProcessing {
         return edge;
     }
 
+    public void saveImages() {
+
+        for (Integer[] x : NumbersX)
+            for (Integer[] y : NumbersY) {
+                BufferedImage tmp = image.getSubimage(x[0], y[0], x[1] - x[0], y[1] - y[0]);
+                Network.process(tmp);
+
+            }
+    }
 }
