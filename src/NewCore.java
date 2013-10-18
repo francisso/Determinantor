@@ -68,6 +68,9 @@ public class NewCore extends Component {
         processing.defaultProcess();
         image = processing.getImage();
         ImageProcessing.DrawRectangles(image);
+
+
+        int i = net._getNumber(processing.getFirstImage());
         return image;
     }
 

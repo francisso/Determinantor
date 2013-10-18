@@ -12,16 +12,17 @@ import java.util.ArrayList;
  * Time: 17:36
  * To change this template use File | Settings | File Templates.
  */
-public class Network {
-    protected static final String DEFAULT_PATH = "C:\\Temp\\Network\\";
-    protected static final int DEFAULT_HEIGHT = 60, DEFAULT_WIDTH = 60;
+class Network {
+    private static final String DEFAULT_PATH = "C:\\Temp\\Network\\";
+    static final int DEFAULT_HEIGHT = 60;
+    static final int DEFAULT_WIDTH = 60;
     private static final int COUNT = 11; //цифры 0..9, '-'
-    protected static final String DEFAULT_FORMAT = "jpg";
-    private static final boolean AUTO_TEACH = true;
+    static final String DEFAULT_FORMAT = "jpg";
+    private static final boolean AUTO_TEACH = false;
     //Константа, обозначающая нейрон "минус"
-    protected static final int MINUS = 10;
+    private static final int MINUS = 10;
 
-    private Neuron[] neurons;
+    private final Neuron[] neurons;
 
 
     //TODO Расширить на числа, большие 9 или меньшие 0
@@ -42,7 +43,7 @@ public class Network {
                     createImage(createPath(i));
 
             } catch (IOException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                e.printStackTrace();
             }
         }
 
@@ -121,37 +122,6 @@ public class Network {
             neuron.Save();
     }
 
-
-    private static int i = 0;
-
-
-    public static void process(BufferedImage input) {
-
-        // BufferedImage image = input;
-        ArrayList<BufferedImage> array = new ArrayList<BufferedImage>();
-        int x = 0;
-        while (x < input.getWidth()) {
-            while ((x < input.getWidth()) && isColumnWhite(input, x))
-                x += 1;
-            int xStart = x;
-            while ((x < input.getWidth()) && !isColumnWhite(input, x))
-                x++;
-            int xEnd = x;
-            //  x++;
-
-            if (xEnd > xStart)
-                array.add(input.getSubimage(xStart, 0, xEnd - xStart, input.getHeight()));
-        }
-        for (BufferedImage image : array) {
-
-            Neuron neuron = new Neuron(DEFAULT_PATH + "imgs\\" + i + ".jpg", image);
-            neuron.Save();
-            i++;
-        }
-
-
-    }
-
     private static boolean isColumnWhite(BufferedImage image, int x) {
         int sum = 0;
 
@@ -162,14 +132,17 @@ public class Network {
 
     }
 
-    private static boolean isColumnBlack(BufferedImage image, int x) {
-        int sum = 0;
-
-        for (int y = 0; y < image.getHeight(); y++)
-            sum += (image.getRGB(x, y) == Color.BLACK.getRGB()) ? 0 : 1;
-
-        return (sum <= 0.1 * image.getHeight());
-
+    public int _getNumber(BufferedImage image) {
+        ArrayList<Integer> coords = new ArrayList<Integer>();
+        boolean lastIsWhite = true;
+        for (int i = 0; i < image.getWidth(); i++)
+            if (isColumnWhite(image, i) != lastIsWhite)
+                coords.add(i);
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < coords.size() - 1; i++) {
+            int number = getNumber(image.getSubimage(coords.get(i), 0, coords.get(i + 1) - coords.get(i), image.getHeight()));
+            builder.append((number == MINUS) ? "-" : number);
+        }
+        return Integer.parseInt(builder.toString());
     }
-
 }

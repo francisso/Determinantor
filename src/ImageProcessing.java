@@ -12,8 +12,6 @@ import java.util.ArrayList;
 class ImageProcessing {
 
     private static final double BRACKETS_RATE = 0.01;
-    //Удалять ли пробелы между минусом и цифрой автоматически
-    private static final boolean OPTIMIZE_COLUMNS_BY_DEFAULT = true;
     private static final double MIN_PERCENT_OF_BLACK_ROW = 0.005;
     private static final double MIN_PERCENT_OF_BLACK_COLUMN = 0.01;
     private static final double PERCENT_OF_BLACK_PIXELS = 0.7;
@@ -28,7 +26,7 @@ class ImageProcessing {
 
     private BufferedImage image = null;
 
-    protected BufferedImage getImage() {
+    BufferedImage getImage() {
         return image;
     }
 
@@ -41,11 +39,9 @@ class ImageProcessing {
      * Удаление шума с изображения
      *
      * @param step Шаг обработки
-     * @return Обработанное изображение
      */
-    @NotNull
-    public void RemoveNoise(int step) {
-        BufferedImage bufferedImage = (BufferedImage) image;
+    void RemoveNoise(int step) {
+        BufferedImage bufferedImage = image;
         BufferedImage noiseFree = new BufferedImage(bufferedImage.getWidth(), bufferedImage.getHeight(), bufferedImage.getType());
 
         for (int i = step - 1; i < bufferedImage.getWidth(); i += step)
@@ -64,7 +60,7 @@ class ImageProcessing {
         image = noiseFree;
     }
 
-    protected void defaultProcess() {
+    void defaultProcess() {
         Binarize();
         RemoveBrackets();
         RemoveNoise(2);
@@ -73,7 +69,6 @@ class ImageProcessing {
         NumbersX = OptimizeColumnsArray(NumbersX);
 //        NumbersX = OptimizeColumnsArray(NumbersX);
 
-        saveImages();
     }
 
     private static void CopyBlock(@NotNull BufferedImage source, @NotNull BufferedImage dest, int x, int y, int step) {
@@ -112,8 +107,6 @@ class ImageProcessing {
 
     /**
      * Удаление скобок с изображения
-     *
-     * @return Обработанное изображение
      */
     private void RemoveBrackets() {
         BufferedImage bufferedImage = image;
@@ -165,7 +158,7 @@ class ImageProcessing {
     /**
      * Заполняет массив NumbersX координатами начал и концов строк
      */
-    public void FindRows() {
+    void FindRows() {
 
         int pixels[] = new int[image.getWidth()];
         image.getRGB(0, 0, image.getWidth(), 1, pixels, 0, 1);
@@ -199,7 +192,7 @@ class ImageProcessing {
     /**
      * Заполняет массив NumbersY координатами начал и концов столбцов
      */
-    public void FindColumns() {
+    void FindColumns() {
 
         int pixels[] = new int[image.getHeight()];
         image.getRGB(0, 0, 1, image.getHeight(), pixels, 0, 1);
@@ -269,7 +262,7 @@ class ImageProcessing {
         for (int i = 1; i < numbersX.size(); i++) {
             last = NumbersX.get(i - 1);
             current = NumbersX.get(i);
-            if (current[0] - last[1] > distance / 3) {
+            if (current[0] - last[1] > distance / 2) {
                 resultList.add(last);
                 if (i == numbersX.size() - 1)
                     resultList.add(current);
@@ -287,11 +280,8 @@ class ImageProcessing {
 
     /**
      * Создает бинаризированное изображение
-     *
-     * @return Бинаризированное изображение
      */
-    @NotNull
-    public void Binarize() {
+    void Binarize() {
         BufferedImage binarized = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
         int colors[] = new int[256];
 
@@ -373,13 +363,7 @@ class ImageProcessing {
         return edge;
     }
 
-    public void saveImages() {
-
-        for (Integer[] x : NumbersX)
-            for (Integer[] y : NumbersY) {
-                BufferedImage tmp = image.getSubimage(x[0], y[0], x[1] - x[0], y[1] - y[0]);
-                Network.process(tmp);
-
-            }
+    public BufferedImage getFirstImage() {
+        return image.getSubimage(NumbersX.get(0)[0], NumbersX.get(0)[1], NumbersX.get(1)[0] - NumbersX.get(0)[0], NumbersX.get(1)[1] - NumbersX.get(0)[1]);
     }
 }

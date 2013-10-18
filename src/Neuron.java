@@ -13,12 +13,12 @@ import java.io.IOException;
  * Time: 17:02
  * To change this template use File | Settings | File Templates.
  */
-public class Neuron {
+class Neuron {
 
     //Картинка, содержащая вероятности нахождения пикселей. черный - 100% -> Белый 0%
     private BufferedImage base;
     //Путь к текущему нейрону
-    private String path;
+    private final String path;
 
 
     Neuron(String path) {
@@ -70,11 +70,12 @@ public class Neuron {
     public double getConcurrence(BufferedImage sample) {
         double result = 0.0;
         /* return result; */
+        BufferedImage mesurable = resizeImage(sample, 60, 60);
 
         for (int x = 0; x < base.getWidth(); x++)
             for (int y = 0; y < base.getHeight(); y++) {
                 int baseColor = base.getRGB(x, y);
-                int sampleColor = sample.getRGB(x, y);
+                int sampleColor = mesurable.getRGB(x, y);
                 if (sampleColor == Color.BLACK.getRGB())
                     result += baseColor / sampleColor;
             }

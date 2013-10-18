@@ -31,11 +31,11 @@ class ImageDrawing {
         DrawHorizontalLine(image, y, LINE_SIZE);
     }
 
-    static void DrawHorizontalLine(@NotNull BufferedImage image, int y, int lineSize ) {
+    private static void DrawHorizontalLine(@NotNull BufferedImage image, int y, int lineSize) {
         DrawHorizontalLine(image, y, lineSize, Color.RED);
     }
 
-    static void DrawHorizontalLine(@NotNull BufferedImage image, int y, int lineSize, @NotNull Color color) {
+    private static void DrawHorizontalLine(@NotNull BufferedImage image, int y, int lineSize, @NotNull Color color) {
         int lineSize1 = lineSize;
         int y1 = y;
         if (y1 + lineSize1 >= image.getHeight())
@@ -62,7 +62,7 @@ class ImageDrawing {
 
     }
 
-    static void DrawHorizontalLine(@NotNull BufferedImage image, int y, int xStart, int xEnd, int lineSize, @NotNull Color color) {
+    private static void DrawHorizontalLine(@NotNull BufferedImage image, int y, int xStart, int xEnd, int lineSize, @NotNull Color color) {
         int y1 = y;
         for (int yStart = y1; y1 < yStart + lineSize; y1++)
             for (int x = xStart; x <= xEnd; x++)
@@ -82,11 +82,11 @@ class ImageDrawing {
         DrawVerticalLine(image, x, LINE_SIZE);
     }
 
-    static void DrawVerticalLine(@NotNull BufferedImage image, int x, int lineSize) {
+    private static void DrawVerticalLine(@NotNull BufferedImage image, int x, int lineSize) {
         DrawVerticalLine(image, x, lineSize, Color.RED);
     }
 
-    static void DrawVerticalLine(@NotNull BufferedImage image, int x, int lineSize, @NotNull Color color) {
+    private static void DrawVerticalLine(@NotNull BufferedImage image, int x, int lineSize, @NotNull Color color) {
         int lineSize1 = lineSize;
         int x1 = x;
         if (x1 + lineSize1 >= image.getWidth())
@@ -111,7 +111,7 @@ class ImageDrawing {
         DrawVerticalLine(image, x, yStart, yEnd, LINE_SIZE, Color.GREEN);
     }
 
-    static void DrawVerticalLine(@NotNull BufferedImage image, int x, int yStart, int yEnd, int lineSize, @NotNull Color color) {
+    private static void DrawVerticalLine(@NotNull BufferedImage image, int x, int yStart, int yEnd, int lineSize, @NotNull Color color) {
         int x1 = x;
         for (int xStart = x1; x1 < xStart + lineSize; x1++)
             for (int y = yStart; y <= yEnd; y++)
@@ -127,7 +127,7 @@ class ImageDrawing {
     //</editor-fold>
 
     //<editor-fold desc="Draw Rectangle">
-    static void DrawRectangle(@NotNull BufferedImage image, int x, int y, int xEnd, int yEnd, int lineSize, @NotNull Color color) {
+    private static void DrawRectangle(@NotNull BufferedImage image, int x, int y, int xEnd, int yEnd, int lineSize, @NotNull Color color) {
         DrawHorizontalLine(image, y, x, xEnd, lineSize, color);
         DrawHorizontalLine(image, yEnd, x, xEnd, lineSize, color);
         DrawVerticalLine(image, x, y, yEnd, lineSize, color);
