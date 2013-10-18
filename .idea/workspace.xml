@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3628a46-19e9-4532-a246-c37cd1e1ca90" name="Default" comment="There should be a way C:\Temp\Network\imgs&#10;And then there wil appear images of symbols">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ImageProcessing.java" afterPath="$PROJECT_DIR$/src/ImageProcessing.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NewCore.java" afterPath="$PROJECT_DIR$/src/NewCore.java" />
+    <list default="true" id="d3628a46-19e9-4532-a246-c37cd1e1ca90" name="Default" comment="OptimizeArray fine.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TicTacToe.iws" />
@@ -17,7 +15,7 @@
     <file path="/a.dummy" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1380891068560" ignored="false" />
     <file path="/Neuron.java" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1381850444757" ignored="false" />
     <file path="/Network.java" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1381870569159" ignored="false" />
-    <file path="/Dummy.txt" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1382107511453" ignored="false" />
+    <file path="/Dummy.txt" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1382107600099" ignored="false" />
     <file path="$PROJECT_DIR$/../../../ImageTest/Intersection/src/Main.java" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1382105536509" ignored="false" />
     <file path="/Main.java" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1382105480774" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -89,7 +87,7 @@
       </breakpoint>
     </line_breakpoints>
     <method_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/ImageProcessing.java" line="168" class="ImageProcessing" package="">
+      <breakpoint url="file://$PROJECT_DIR$/src/ImageProcessing.java" line="167" class="ImageProcessing" package="">
         <option name="WATCH_ENTRY" value="true" />
         <option name="WATCH_EXIT" value="true" />
         <option name="ENABLED" value="true" />
@@ -128,7 +126,7 @@
       <file leaf-file-name="ImageProcessing.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ImageProcessing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="272" column="25" selection-start="9621" selection-end="9675" vertical-scroll-proportion="0.67528737">
+            <state line="265" column="85" selection-start="9425" selection-end="9425" vertical-scroll-proportion="0.3821839">
               <folding>
                 <element signature="docComment;class#ImageProcessing#0" expanded="false" />
                 <element signature="method#getImage#0;class#ImageProcessing#0" expanded="false" />
@@ -138,13 +136,13 @@
                 <element signature="method#PaintBlock#0;class#ImageProcessing#0" expanded="false" />
                 <element signature="docComment;method#RemoveBrackets#0;class#ImageProcessing#0" expanded="false" />
                 <element signature="docComment;method#FindRows#0;class#ImageProcessing#0" expanded="false" />
-                <element signature="e#6451#6479#0" expanded="false" />
+                <element signature="e#6446#6474#0" expanded="false" />
                 <element signature="docComment;method#FindColumns#0;class#ImageProcessing#0" expanded="false" />
                 <element signature="method#FindColumns#0;class#ImageProcessing#0" expanded="false" />
                 <element signature="docComment;method#DrawRectangles#0;class#ImageProcessing#0" expanded="false" />
                 <element signature="docComment;method#OptimizeColumnsArray#0;class#ImageProcessing#0" expanded="false" />
                 <element signature="docComment;method#Binarize#0;class#ImageProcessing#0" expanded="false" />
-                <element signature="e#10842#10879#0" expanded="false" />
+                <element signature="e#10840#10877#0" expanded="false" />
                 <element signature="method#RemoveBlackSquare#0;class#ImageProcessing#0" expanded="false" />
                 <element signature="method#BinarizeByEdge#0;class#ImageProcessing#0" expanded="false" />
                 <element signature="docComment;method#IndexOfMaximum#0;class#ImageProcessing#0" expanded="false" />
@@ -505,7 +503,11 @@
       <created>1381870923831</created>
       <updated>1381870923831</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="OptimizeArray fine.">
+      <created>1382107566088</created>
+      <updated>1382107566088</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -537,7 +539,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39693356" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3407155" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3407155" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32767403" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3253833" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -554,6 +556,9 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39863715" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -597,7 +602,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="There should be a way C:\Temp\Network\imgs&#10;And then there wil appear images of symbols" />
+    <option name="LAST_COMMIT_MESSAGE" value="OptimizeArray fine." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -612,6 +617,7 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="There should be a way C:\Temp\Network\imgs&#10;And then there wil appear images of symbols" />
+    <MESSAGE value="OptimizeArray fine." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -718,7 +724,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ImageProcessing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="272" column="25" selection-start="9621" selection-end="9675" vertical-scroll-proportion="0.67528737">
+        <state line="265" column="85" selection-start="9425" selection-end="9425" vertical-scroll-proportion="0.3821839">
           <folding>
             <element signature="docComment;class#ImageProcessing#0" expanded="false" />
             <element signature="method#getImage#0;class#ImageProcessing#0" expanded="false" />
@@ -728,13 +734,13 @@
             <element signature="method#PaintBlock#0;class#ImageProcessing#0" expanded="false" />
             <element signature="docComment;method#RemoveBrackets#0;class#ImageProcessing#0" expanded="false" />
             <element signature="docComment;method#FindRows#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="e#6451#6479#0" expanded="false" />
+            <element signature="e#6446#6474#0" expanded="false" />
             <element signature="docComment;method#FindColumns#0;class#ImageProcessing#0" expanded="false" />
             <element signature="method#FindColumns#0;class#ImageProcessing#0" expanded="false" />
             <element signature="docComment;method#DrawRectangles#0;class#ImageProcessing#0" expanded="false" />
             <element signature="docComment;method#OptimizeColumnsArray#0;class#ImageProcessing#0" expanded="false" />
             <element signature="docComment;method#Binarize#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="e#10842#10879#0" expanded="false" />
+            <element signature="e#10840#10877#0" expanded="false" />
             <element signature="method#RemoveBlackSquare#0;class#ImageProcessing#0" expanded="false" />
             <element signature="method#BinarizeByEdge#0;class#ImageProcessing#0" expanded="false" />
             <element signature="docComment;method#IndexOfMaximum#0;class#ImageProcessing#0" expanded="false" />
