@@ -3,24 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="d3628a46-19e9-4532-a246-c37cd1e1ca90" name="Default" comment="There should be a way C:\Temp\Network\imgs&#10;And then there wil appear images of symbols">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ImageProcessing.java" afterPath="$PROJECT_DIR$/src/ImageProcessing.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Network.java" afterPath="$PROJECT_DIR$/src/Network.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Neuron.java" afterPath="$PROJECT_DIR$/src/Neuron.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NewCore.java" afterPath="$PROJECT_DIR$/src/NewCore.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TicTacToe.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Core.java" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1379240187308" ignored="false" />
     <file path="/fragment.java" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1381867932282" ignored="false" />
-    <file path="/NewCore.java" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1381868288819" ignored="false" />
+    <file path="/NewCore.java" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1381901481176" ignored="false" />
     <file path="/test.java" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1379342859343" ignored="false" />
-    <file path="/ImageProcessing.java" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1381868468194" ignored="false" />
+    <file path="/ImageProcessing.java" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1382106980938" ignored="false" />
     <file path="/ImageDrawing.java" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1380877922077" ignored="false" />
     <file path="/a.dummy" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1380891068560" ignored="false" />
     <file path="/Neuron.java" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1381850444757" ignored="false" />
     <file path="/Network.java" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1381870569159" ignored="false" />
-    <file path="/Dummy.txt" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1381870847099" ignored="false" />
+    <file path="/Dummy.txt" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1382107511453" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../ImageTest/Intersection/src/Main.java" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1382105536509" ignored="false" />
+    <file path="/Main.java" changelist="d3628a46-19e9-4532-a246-c37cd1e1ca90" time="1382105480774" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +70,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/src/Network.java" line="147" class="Network" package="">
         <option name="ENABLED" value="true" />
@@ -88,7 +88,25 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <method_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/ImageProcessing.java" line="168" class="ImageProcessing" package="">
+        <option name="WATCH_ENTRY" value="true" />
+        <option name="WATCH_EXIT" value="true" />
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </method_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -101,70 +119,49 @@
       <file leaf-file-name="NewCore.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/NewCore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="6" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="docComment;class#NewCore#0" expanded="false" />
-                <element signature="method#main#0;class#NewCore#0" expanded="false" />
-                <element signature="method#NewCore#0;class#NewCore#0" expanded="false" />
-                <element signature="method#paint#0;class#NewCore#0" expanded="false" />
-                <element signature="method#getPreferredSize#0;class#NewCore#0" expanded="false" />
-                <element signature="method#GetImage#0;class#NewCore#0" expanded="false" />
-              </folding>
+            <state line="84" column="44" selection-start="2599" selection-end="2599" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageProcessing.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ImageProcessing.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ImageProcessing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="372" column="24" selection-start="13279" selection-end="13279" vertical-scroll-proportion="0.0">
+            <state line="272" column="25" selection-start="9621" selection-end="9675" vertical-scroll-proportion="0.67528737">
               <folding>
                 <element signature="docComment;class#ImageProcessing#0" expanded="false" />
+                <element signature="method#getImage#0;class#ImageProcessing#0" expanded="false" />
                 <element signature="method#ImageProcessing#0;class#ImageProcessing#0" expanded="false" />
                 <element signature="docComment;method#RemoveNoise#0;class#ImageProcessing#0" expanded="false" />
-                <element signature="method#RemoveNoise#0;class#ImageProcessing#0" expanded="false" />
                 <element signature="method#CopyBlock#0;class#ImageProcessing#0" expanded="false" />
                 <element signature="method#PaintBlock#0;class#ImageProcessing#0" expanded="false" />
-                <element signature="method#GetCountOfBlack#0;class#ImageProcessing#0" expanded="false" />
                 <element signature="docComment;method#RemoveBrackets#0;class#ImageProcessing#0" expanded="false" />
-                <element signature="method#RemoveBrackets#0;class#ImageProcessing#0" expanded="false" />
                 <element signature="docComment;method#FindRows#0;class#ImageProcessing#0" expanded="false" />
-                <element signature="method#FindRows#0;class#ImageProcessing#0" expanded="false" />
-                <element signature="e#6321#6349#0" expanded="false" />
+                <element signature="e#6451#6479#0" expanded="false" />
                 <element signature="docComment;method#FindColumns#0;class#ImageProcessing#0" expanded="false" />
+                <element signature="method#FindColumns#0;class#ImageProcessing#0" expanded="false" />
                 <element signature="docComment;method#DrawRectangles#0;class#ImageProcessing#0" expanded="false" />
-                <element signature="method#DrawRectangles#0;class#ImageProcessing#0" expanded="false" />
                 <element signature="docComment;method#OptimizeColumnsArray#0;class#ImageProcessing#0" expanded="false" />
-                <element signature="method#OptimizeColumnsArray#0;class#ImageProcessing#0" expanded="false" />
                 <element signature="docComment;method#Binarize#0;class#ImageProcessing#0" expanded="false" />
-                <element signature="method#Binarize#0;class#ImageProcessing#0" expanded="false" />
-                <element signature="e#10624#10661#0" expanded="false" />
+                <element signature="e#10842#10879#0" expanded="false" />
                 <element signature="method#RemoveBlackSquare#0;class#ImageProcessing#0" expanded="false" />
                 <element signature="method#BinarizeByEdge#0;class#ImageProcessing#0" expanded="false" />
                 <element signature="docComment;method#IndexOfMaximum#0;class#ImageProcessing#0" expanded="false" />
                 <element signature="method#IndexOfMaximum#0;class#ImageProcessing#0" expanded="false" />
+                <element signature="method#saveImages#0;class#ImageProcessing#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Network.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Network.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Network.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="16" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.33423913">
+            <state line="59" column="43" selection-start="1742" selection-end="1742" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3665#3680#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Unsafe.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/jre/lib/rt.jar!/sun/misc/Unsafe.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="327" column="23" selection-start="10259" selection-end="10259" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -182,13 +179,7 @@
         <entry file="file://$PROJECT_DIR$/src/Neuron.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="35" column="39" selection-start="854" selection-end="854" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="docComment;method#Teach#0;class#Neuron#0" expanded="false" />
-                <element signature="method#Teach#0;class#Neuron#0" expanded="false" />
-                <element signature="docComment;method#getConcurrence#0;class#Neuron#0" expanded="false" />
-                <element signature="method#getConcurrence#0;class#Neuron#0" expanded="false" />
-                <element signature="method#resizeImage#0;class#Neuron#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -216,9 +207,9 @@
         <option value="$PROJECT_DIR$/src/ImageProperties.java" />
         <option value="$PROJECT_DIR$/src/ImageDrawing.java" />
         <option value="$PROJECT_DIR$/src/Neuron.java" />
+        <option value="$PROJECT_DIR$/src/Network.java" />
         <option value="$PROJECT_DIR$/src/NewCore.java" />
         <option value="$PROJECT_DIR$/src/ImageProcessing.java" />
-        <option value="$PROJECT_DIR$/src/Network.java" />
       </list>
     </option>
   </component>
@@ -306,7 +297,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -317,46 +308,7 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TicTacToe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TicTacToe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Determinantor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TicTacToe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Determinantor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
@@ -549,6 +501,11 @@
       <created>1378028695651</created>
       <updated>1378028695651</updated>
     </task>
+    <task id="LOCAL-00001" summary="There should be a way C:\Temp\Network\imgs&#10;And then there wil appear images of symbols">
+      <created>1381870923831</created>
+      <updated>1381870923831</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -573,26 +530,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32767403" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34582624" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39693356" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32879046" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3407155" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32879046" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32767403" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3253833" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3253833" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6712095" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6592845" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943925" sideWeight="0.6007005" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23863636" sideWeight="0.6712095" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3424191" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3407155" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34582624" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39863715" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -668,11 +625,16 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TicTacToe.iml">
+    <entry file="file://$PROJECT_DIR$/src/Neuron.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="35" column="39" selection-start="854" selection-end="854" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/javax/swing/JComponent.java">
@@ -707,21 +669,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Neuron.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="39" selection-start="854" selection-end="854" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="docComment;method#Teach#0;class#Neuron#0" expanded="false" />
-            <element signature="method#Teach#0;class#Neuron#0" expanded="false" />
-            <element signature="docComment;method#getConcurrence#0;class#Neuron#0" expanded="false" />
-            <element signature="method#getConcurrence#0;class#Neuron#0" expanded="false" />
-            <element signature="method#resizeImage#0;class#Neuron#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -729,20 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="410" column="0" selection-start="14988" selection-end="14988" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/NewCore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="6" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="docComment;class#NewCore#0" expanded="false" />
-            <element signature="method#main#0;class#NewCore#0" expanded="false" />
-            <element signature="method#NewCore#0;class#NewCore#0" expanded="false" />
-            <element signature="method#paint#0;class#NewCore#0" expanded="false" />
-            <element signature="method#getPreferredSize#0;class#NewCore#0" expanded="false" />
-            <element signature="method#GetImage#0;class#NewCore#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -755,49 +695,51 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/jre/lib/rt.jar!/sun/misc/Unsafe.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="327" column="23" selection-start="10259" selection-end="10259" vertical-scroll-proportion="0.0">
+        <state line="327" column="23" selection-start="10259" selection-end="10259" vertical-scroll-proportion="0.5603448">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ImageProcessing.java">
+    <entry file="file://$PROJECT_DIR$/src/NewCore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="372" column="24" selection-start="13279" selection-end="13279" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="docComment;class#ImageProcessing#0" expanded="false" />
-            <element signature="method#ImageProcessing#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="docComment;method#RemoveNoise#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="method#RemoveNoise#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="method#CopyBlock#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="method#PaintBlock#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="method#GetCountOfBlack#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="docComment;method#RemoveBrackets#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="method#RemoveBrackets#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="docComment;method#FindRows#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="method#FindRows#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="e#6321#6349#0" expanded="false" />
-            <element signature="docComment;method#FindColumns#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="docComment;method#DrawRectangles#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="method#DrawRectangles#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="docComment;method#OptimizeColumnsArray#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="method#OptimizeColumnsArray#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="docComment;method#Binarize#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="method#Binarize#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="e#10624#10661#0" expanded="false" />
-            <element signature="method#RemoveBlackSquare#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="method#BinarizeByEdge#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="docComment;method#IndexOfMaximum#0;class#ImageProcessing#0" expanded="false" />
-            <element signature="method#IndexOfMaximum#0;class#ImageProcessing#0" expanded="false" />
-          </folding>
+        <state line="84" column="44" selection-start="2599" selection-end="2599" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Network.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="16" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.33423913">
+        <state line="59" column="43" selection-start="1742" selection-end="1742" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3665#3680#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ImageProcessing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="272" column="25" selection-start="9621" selection-end="9675" vertical-scroll-proportion="0.67528737">
+          <folding>
+            <element signature="docComment;class#ImageProcessing#0" expanded="false" />
+            <element signature="method#getImage#0;class#ImageProcessing#0" expanded="false" />
+            <element signature="method#ImageProcessing#0;class#ImageProcessing#0" expanded="false" />
+            <element signature="docComment;method#RemoveNoise#0;class#ImageProcessing#0" expanded="false" />
+            <element signature="method#CopyBlock#0;class#ImageProcessing#0" expanded="false" />
+            <element signature="method#PaintBlock#0;class#ImageProcessing#0" expanded="false" />
+            <element signature="docComment;method#RemoveBrackets#0;class#ImageProcessing#0" expanded="false" />
+            <element signature="docComment;method#FindRows#0;class#ImageProcessing#0" expanded="false" />
+            <element signature="e#6451#6479#0" expanded="false" />
+            <element signature="docComment;method#FindColumns#0;class#ImageProcessing#0" expanded="false" />
+            <element signature="method#FindColumns#0;class#ImageProcessing#0" expanded="false" />
+            <element signature="docComment;method#DrawRectangles#0;class#ImageProcessing#0" expanded="false" />
+            <element signature="docComment;method#OptimizeColumnsArray#0;class#ImageProcessing#0" expanded="false" />
+            <element signature="docComment;method#Binarize#0;class#ImageProcessing#0" expanded="false" />
+            <element signature="e#10842#10879#0" expanded="false" />
+            <element signature="method#RemoveBlackSquare#0;class#ImageProcessing#0" expanded="false" />
+            <element signature="method#BinarizeByEdge#0;class#ImageProcessing#0" expanded="false" />
+            <element signature="docComment;method#IndexOfMaximum#0;class#ImageProcessing#0" expanded="false" />
+            <element signature="method#IndexOfMaximum#0;class#ImageProcessing#0" expanded="false" />
+            <element signature="method#saveImages#0;class#ImageProcessing#0" expanded="false" />
           </folding>
         </state>
       </provider>

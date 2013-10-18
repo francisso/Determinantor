@@ -11,7 +11,7 @@ import java.util.ArrayList;
  */
 class ImageProcessing {
 
-    private static final double BRACKETS_RATE = 0.03;
+    private static final double BRACKETS_RATE = 0.01;
     //Удалять ли пробелы между минусом и цифрой автоматически
     private static final boolean OPTIMIZE_COLUMNS_BY_DEFAULT = true;
     private static final double MIN_PERCENT_OF_BLACK_ROW = 0.005;
@@ -27,6 +27,10 @@ class ImageProcessing {
     private static final int FADE_STEP = 25;
 
     private BufferedImage image = null;
+
+    protected BufferedImage getImage() {
+        return image;
+    }
 
     ImageProcessing(BufferedImage source) {
         image = source;
@@ -67,6 +71,8 @@ class ImageProcessing {
         FindRows();
         FindColumns();
         NumbersX = OptimizeColumnsArray(NumbersX);
+//        NumbersX = OptimizeColumnsArray(NumbersX);
+
         saveImages();
     }
 
@@ -109,7 +115,7 @@ class ImageProcessing {
      *
      * @return Обработанное изображение
      */
-    public void RemoveBrackets() {
+    private void RemoveBrackets() {
         BufferedImage bufferedImage = image;
         int startX = 0, endX = 0;
         for (int i = 0; i < bufferedImage.getWidth(); i++) {
@@ -263,8 +269,10 @@ class ImageProcessing {
         for (int i = 1; i < numbersX.size(); i++) {
             last = NumbersX.get(i - 1);
             current = NumbersX.get(i);
-            if (current[0] - last[1] > distance / 2) {
+            if (current[0] - last[1] > distance / 3) {
                 resultList.add(last);
+                if (i == numbersX.size() - 1)
+                    resultList.add(current);
             } else {
                 i++;
                 Integer[] temp = new Integer[2];

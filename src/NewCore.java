@@ -24,7 +24,7 @@ import java.io.IOException;
 
 public class NewCore extends Component {
     private final static boolean DEBUG = true;
-    private final static String DEBUG_FILENAME = "C:\\IMAG0242_.jpg";
+    private final static String DEBUG_FILENAME = "C:\\IMAG0242`.jpg";
     private static final float MAX_PICTURE_SIDE = 1000.f;
     @Nullable
     private BufferedImage img = null, image = null;
@@ -66,8 +66,8 @@ public class NewCore extends Component {
         image = resizeImage(image);
         ImageProcessing processing = new ImageProcessing(image);
         processing.defaultProcess();
-
-        // ImageProcessing.DrawRectangles(image);
+        image = processing.getImage();
+        ImageProcessing.DrawRectangles(image);
         return image;
     }
 
